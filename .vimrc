@@ -53,8 +53,6 @@ Plugin 'slashmili/alchemist.vim'
 
 call vundle#end()
 
-filetype plugin indent on
-
 " --- General settings ------------------------------------------------
 set backspace=indent,eol,start
 set ruler
@@ -84,11 +82,6 @@ set expandtab
 nnoremap <S-Tab> <<
 " shift-tab for insert mode
 inoremap <S-Tab> <C-d>
-
-" ----- Keyboard Mappings ---------------------------------------------
-" ----- Map cmd+i to esc for easier mode switching -----
-inoremap <C-i> <Esc>
-nnoremap <C-i> <Esc>
 
 " ----- Plugin-Specific Settings --------------------------------------
 " ----- altercation/vim-colors-solarized settings -----
