@@ -163,4 +163,30 @@ augroup END
 let g:mix_format_on_save = 1
 let g:mix_format_silent_errors = 0
 
+" ----- Language specific ctag settings -------------------------------
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds' : [
+        \ 'f:functions',
+        \ 'functions:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'm:modules',
+        \ 'p:protocols',
+        \ 'r:records',
+        \ 't:tests'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 'm' : 'module'
+    \ },
+    \ 'scope2kind' : {
+        \ 'module' : 'm'
+    \ }
+\ }
+
 
