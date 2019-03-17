@@ -21,6 +21,7 @@ Plugin 'vim-airline/vim-airline-themes'
 " ----- IDE Features -------------------- -----------------------------
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
@@ -28,6 +29,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'w0rp/ale'
+Plugin 'valloric/youcompleteme'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
