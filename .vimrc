@@ -212,6 +212,9 @@ augroup END
 let g:mix_format_on_save = 1
 let g:mix_format_silent_errors = 0
 
+" ----- Valloric/YouCompleteMe settings ---
+let g:ycm_path_to_python_interpreter="/Users/brian/anaconda/bin/python3.6"
+
 " ----- Language specific ctag settings -------------------------------
 let g:tagbar_type_elixir = {
     \ 'ctagstype' : 'elixir',

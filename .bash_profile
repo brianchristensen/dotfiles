@@ -34,6 +34,8 @@ alias gitclean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git br
 alias py='python3'
 alias rpw='openssl rand 50 -hex'
 alias irc='irssi'
+alias t="tmux -2"
+alias e="vi"
 
 # added by Anaconda3 4.4.0 installer
 export PATH="/Users/brian/anaconda/bin:$PATH"
@@ -41,3 +43,5 @@ export PATH="/Users/brian/anaconda/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
