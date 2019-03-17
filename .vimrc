@@ -31,6 +31,7 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'w0rp/ale'
 Plugin 'valloric/youcompleteme'
+Plugin 'tpope/vim-endwise'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -104,7 +105,7 @@ set smarttab                                " At start of line, <Tab> inserts sh
 set splitbelow                              " New window goes below
 set splitright                              " New windows goes right
 set tags=./tags;
-set timeout timeoutlen=1000 ttimeoutlen=0   " No delay for entering normal mode
+set timeout timeoutlen=1000 ttimeoutlen=10          " No delay for entering normal mode
 set ttyfast                                 " Send more characters at a given time
 set undodir=~/.vim/.undo
 set undofile                                " Persistent Undo
