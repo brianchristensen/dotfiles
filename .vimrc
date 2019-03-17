@@ -57,13 +57,64 @@ Plugin 'slashmili/alchemist.vim'
 call vundle#end()
 
 " --- General settings ------------------------------------------------
+set autoindent                              " Copy indent from last line when starting new line
+set autoread                                " Reload files changed outside automatically
 set backspace=indent,eol,start
-set ruler
-set number
-set showcmd
-set incsearch
-set hlsearch
-set formatoptions-=t
+set complete=.,w,b,u,t,i
+set completeopt=longest,menu
+set cursorline                              " Highlight current linei
+set diffopt+=iwhite                         " Ignore whitespaces with vimdiff
+set diffopt=filler                          " Add vertical spaces to keep right and left aligned
+set encoding=utf-8 nobomb                   " BOM often causes trouble
+set expandtab                               " Expand tabs to spaces
+set fileencoding=utf-8
+set fileencodings=utf-8,ucs-bom,chinese
+set foldcolumn=0                            " Column to show folds
+set foldenable                              " Enable folding
+" set foldlevel=0                           " Close all folds by default
+set foldlevelstart=99                       " Open all folds by default
+set foldmethod=marker                       " Syntax are used to specify folds
+set foldminlines=0                          " Allow folding single lines
+set foldnestmax=5
+set history=1000                            " Increase history from 20 default to 1000
+set hlsearch                                " Highlight searches
+set ignorecase                              " Ignore case of searches
+set incsearch                               " Highlight dynamically as pattern is typed
+set laststatus=2                            " Always show status line
+set lazyredraw                              " Don't redraw when we don't have to
+set magic                                   " Enable extended regexes
+set modeline
+set nobackup
+set noerrorbells                            " Disable error bells
+set nojoinspaces                            " Only insert single space after a '.', '?' and '!' with a join command
+set noshowmode                              " Don't show the current mode (airline.vim takes care of us)
+set nostartofline                           " Don't reset cursor to start of line when moving around
+set notitle
+set number                                  " Enable line numbers
+set omnifunc=syntaxcomplete#Complete        " Set omni-completion method
+set regexpengine=1
+set ruler                                   " Show the cursor position
+set scrolloff=3                             " Start scrolling three lines before horizontal border of window
+set shiftwidth=2                            " The # of spaces for indenting
+set shortmess=atI                           " Don't show the intro message when starting vim
+set showcmd                                 " display incomplete commands
+set smartcase                               " Ignore 'ignorecase' if search patter contains uppercase characters
+set smarttab                                " At start of line, <Tab> inserts shiftwidth spaces, <Bs> deletes shiftwidth spaces
+set splitbelow                              " New window goes below
+set splitright                              " New windows goes right
+set tags=./tags;
+set timeout timeoutlen=1000 ttimeoutlen=0   " No delay for entering normal mode
+set ttyfast                                 " Send more characters at a given time
+set undodir=~/.vim/.undo
+set undofile                                " Persistent Undo
+set undolevels=1000
+set undoreload=10000
+set wildchar=<Tab>                          " Character for CLI expansion (TAB-completion)
+set wildmenu                                " Hitting TAB in command mode will show possible completions above command line
+set wildmode=list:longest                   " Complete only until point of ambiguity
+set wrapscan                                " Searches wrap around end of file
+set wildignore+=**/*.jpg,*.jpeg,*.gif,**/*.png,*.gif,*.psd,*.o,*.obj,*.min.js
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*
 
 syntax on
 
@@ -87,6 +138,8 @@ nnoremap <S-Tab> <<
 inoremap <S-Tab> <C-d>
 
 " ----- Plugin-Specific Settings --------------------------------------
+command! GdiffInTab tabedit %|vsplit|Gdiff
+
 " ----- altercation/vim-colors-solarized settings -----
 " Toggle this to "light" for light colorscheme
 set background=dark
@@ -184,5 +237,4 @@ let g:tagbar_type_elixir = {
         \ 'module' : 'm'
     \ }
 \ }
-
 
