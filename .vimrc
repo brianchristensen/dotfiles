@@ -70,13 +70,13 @@ set encoding=utf-8 nobomb                   " BOM often causes trouble
 set expandtab                               " Expand tabs to spaces
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,chinese
-set foldcolumn=1                            " Column to show folds
+set foldcolumn=0                            " Column to show folds
 set foldenable                              " Enable folding
 " set foldlevel=0                           " Close all folds by default
 set foldlevelstart=99                       " Open all folds by default
-set foldmethod=marker                       " Syntax are used to specify folds
-set foldminlines=0                          " Allow folding single lines
-set foldnestmax=5
+set foldmethod=indent                       " Syntax are used to specify folds
+set foldminlines=1                          " To allow folding single lines set this to 0
+set foldnestmax=10
 set history=1000                            " Increase history from 20 default to 1000
 set hlsearch                                " Highlight searches
 set ignorecase                              " Ignore case of searches
@@ -143,6 +143,8 @@ inoremap <S-Tab> <C-d>
 " ----- Keyboard bindings ---------------------------------------------
 " double escape will clear search highlights
 nnoremap <esc><esc> :noh<return>
+" clear last used search pattern by searching for empty string
+:let @/ = ""
 
 " ----- Plugin-Specific Settings --------------------------------------
 command! GdiffInTab tabedit %|vsplit|Gdiff
@@ -216,7 +218,7 @@ augroup mydelimitMate
 augroup END
 
 " ----- mhinz/vim-mix-format settings -----
-let g:mix_format_on_save = 1
+let g:mix_format_on_save = 0
 let g:mix_format_silent_errors = 0
 
 " ----- Valloric/YouCompleteMe settings ---
