@@ -5,7 +5,7 @@ set nocompatible
 
 filetype off
 
-" ----- Vundle Plugin Manager ----- -----------------------------------
+" ----- Vundle Plugin Manager -----------------------------------------
 "  Install vundle with this command: git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
 "  Install plugins with this command: vim +PluginInstall +qall or by typing :PluginInstall inside Vim
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -69,7 +69,7 @@ set encoding=utf-8 nobomb                   " BOM often causes trouble
 set expandtab                               " Expand tabs to spaces
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,chinese
-set foldcolumn=0                            " Column to show folds
+set foldcolumn=1                            " Column to show folds
 set foldenable                              " Enable folding
 " set foldlevel=0                           " Close all folds by default
 set foldlevelstart=99                       " Open all folds by default
@@ -92,10 +92,11 @@ set nostartofline                           " Don't reset cursor to start of lin
 set notitle
 set number                                  " Enable line numbers
 set omnifunc=syntaxcomplete#Complete        " Set omni-completion method
+" set relativenumber                        " Uncomment to go from absolute -> hybrid line numbers
 set regexpengine=1
 set ruler                                   " Show the cursor position
-set scrolloff=3                             " Start scrolling three lines before horizontal border of window
-set shiftwidth=2                            " The # of spaces for indenting
+set scrolloff=2                             " Start scrolling two lines before horizontal border of window
+set shiftwidth=1                            " The # of spaces for indenting
 set shortmess=atI                           " Don't show the intro message when starting vim
 set showcmd                                 " display incomplete commands
 set smartcase                               " Ignore 'ignorecase' if search patter contains uppercase characters
@@ -112,6 +113,7 @@ set undoreload=10000
 set wildchar=<Tab>                          " Character for CLI expansion (TAB-completion)
 set wildmenu                                " Hitting TAB in command mode will show possible completions above command line
 set wildmode=list:longest                   " Complete only until point of ambiguity
+set wrap!                                   " Dont wrap at 80 chars
 set wrapscan                                " Searches wrap around end of file
 set wildignore+=**/*.jpg,*.jpeg,*.gif,**/*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*
@@ -136,6 +138,10 @@ set expandtab
 nnoremap <S-Tab> <<
 " shift-tab for insert mode
 inoremap <S-Tab> <C-d>
+
+" ----- Keyboard bindings ---------------------------------------------
+" double escape will clear search highlights
+nnoremap <esc><esc> :noh<return>
 
 " ----- Plugin-Specific Settings --------------------------------------
 command! GdiffInTab tabedit %|vsplit|Gdiff
