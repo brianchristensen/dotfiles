@@ -50,10 +50,13 @@ Plugin 'godlygeek/tabular'
 Plugin 'HTML-AutoCloseTag'
 
 " ----- Language support plugins --------------------------------------
-"  -- Elixir --
+" -- Elixir --
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'mhinz/vim-mix-format'
 Plugin 'slashmili/alchemist.vim'
+" -- Javascript --
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 
@@ -149,6 +152,9 @@ nnoremap <esc><esc> :noh<return>
 " ----- Plugin-Specific Settings --------------------------------------
 command! GdiffInTab tabedit %|vsplit|Gdiff
 
+" ----- ctrlpvim/ctrlp.vim settings -----
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " ----- altercation/vim-colors-solarized settings -----
 " Toggle this to "light" for light colorscheme
 set background=dark
@@ -222,7 +228,7 @@ let g:mix_format_on_save = 0
 let g:mix_format_silent_errors = 0
 
 " ----- Valloric/YouCompleteMe settings ---
-let g:ycm_path_to_python_interpreter="/Users/brian/anaconda/bin/python3.6"
+"let g:ycm_path_to_python_interpreter="/Users/brian/anaconda/bin/python3.6"
 
 " ----- Language specific ctag settings -------------------------------
 let g:tagbar_type_elixir = {
