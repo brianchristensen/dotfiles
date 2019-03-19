@@ -23,16 +23,18 @@ Finish the YouCompleteMe vim autocomplete installation by following the instruct
 https://github.com/Valloric/YouCompleteMe#installation
 Language support can be found under various other repos by including these under .vimrc plugins - Elixir and Javascript are already present.
 
-## Useful Vim chords
+## Useful Vim chords/commands
 Other than the usual vim commands, one can:
 1. Open the nerdtree sidebar with `\t`
 2. Open the ctags sidebar with `\b`
 3. Connect to a database with the `:DB {connection url}` command
 4. Clear out search highlights with double-escape
 5. Easily change the color theme by editing the .vimrc color theme section
-6. Switch between panes with `ctrl-h (or j, k, l)` which is just ctrl + the normal keys used to navigate vim
+6. Reload the .vimrc in an existing vim buffer with `:so ~/.vimrc`
+7. Install plugins in a running vim session with `:PluginInstall`
+8. Switch between panes with `ctrl-h (or j, k, l)` which is just ctrl + the normal keys used to navigate vim
 
-## Useful Tmux chords
+## Useful Tmux chords/commands
 1. `ctrl-b "` split pane horizontally
 2. `ctrl-b %` split pane vertically
 3. `tmux attach -t {session# or session name}` attach to an existing session
