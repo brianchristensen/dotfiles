@@ -13,7 +13,7 @@ The following instructions are Mac-centric.  These changes will turn Vim (in the
 After cloning this repo, copy and paste all the dotfiles into your home directory, though probably avoid the .bash_profile and edit your own manually.
 
 ## Install Vundle
-`git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vi`
+`git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim`
 
 ## Install Vim plugins
 `vim +PluginInstall +qal`
