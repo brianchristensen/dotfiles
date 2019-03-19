@@ -21,6 +21,7 @@ After cloning this repo, copy and paste all the dotfiles into your home director
 ## Install YouCompleteMe (other than vundle plugin portion, which is already done)
 Finish the YouCompleteMe vim autocomplete installation by following the instructions under the following link:
 https://github.com/Valloric/YouCompleteMe#installation
+
 Language support can be found under various other repos by including these under .vimrc plugins - Elixir and Javascript are already present.
 
 ## Useful Vim chords/commands
