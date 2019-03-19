@@ -35,6 +35,7 @@ Plugin 'w0rp/ale'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-endwise'
 Plugin 'luochen1990/rainbow'
+Plugin 'tpope/vim-dadbod'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
