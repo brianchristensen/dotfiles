@@ -2,10 +2,10 @@
 Repo to store my dotfiles
 
 ## Install Vim, Tmux, Ctags, Cmake
-brew install vim
-brew install tmux
-brew install ctags
-brew install cmake
+1. brew install vim
+2. brew install tmux
+3. brew install ctags
+4. brew install cmake
 
 ## Clone this repo, and replace local files
 After cloning this repo, copy and paste all the dotfiles into your home directory
@@ -17,7 +17,9 @@ git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vi
 vim +PluginInstall +qal
 
 ## Install YouCompleteMe (other than vundle plugin portion, which is already done)
+Finish the YouCompleteMe vim autocomplete installation by following the instructions under the following link:
 https://github.com/Valloric/YouCompleteMe#installation
+Language support can be found under various other repos by including these under .vimrc plugins - Elixir and Javascript are already present.
 
 ## Useful Vim chords
 Other than the usual vi commands, one can:
