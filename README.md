@@ -22,6 +22,12 @@ After cloning this repo, copy and paste all the dotfiles into your home director
 Finish the YouCompleteMe vim autocomplete installation by following the instructions under the following link:
 https://github.com/Valloric/YouCompleteMe#installation
 
+Specifically you need to:
+1. `cp /Applications/MacVim.app/Contents/bin/mvim /usr/local/bin/mvim`
+2. `ln -s /usr/local/bin/mvim vim`
+3. `cd ~/.vim/bundle/YouCompleteMe`
+4. `./install.py --clang-completer --tern-completer`
+
 Language support can be added from various other repos by including these under .vimrc plugins - Elixir and Javascript are already present.
 
 ## Useful Vim chords/commands
