@@ -24,19 +24,19 @@ https://github.com/Valloric/YouCompleteMe#installation
 Language support can be found under various other repos by including these under .vimrc plugins - Elixir and Javascript are already present.
 
 ## Useful Vim chords
-Other than the usual vi commands, one can:
+Other than the usual vim commands, one can:
 1. Open the nerdtree sidebar with `\t`
 2. Open the ctags sidebar with `\b`
 3. Connect to a database with the `:DB {connection url}` command
 4. Clear out search highlights with double-escape
 5. Easily change the color theme by editing the .vimrc color theme section
-6. Switch between panes with `ctrl-h (or j, k, l)` which is just ctrl + the normal keys used to navigate vi
+6. Switch between panes with `ctrl-h (or j, k, l)` which is just ctrl + the normal keys used to navigate vim
 
 ## Useful Tmux chords
 1. `ctrl-b "` split pane horizontally
 2. `ctrl-b %` split pane vertically
 3. `tmux attach -t {session# or session name}` attach to an existing session
-4. `ctrl-b :resize-pane -D (or -U, -L, -R) {#size}` resize panes from command keyboard, though I am a cheater so mouse support is enabled as well
+4. `ctrl-b :resize-pane -D (or -U, -L, -R) {#size}` resize panes using keyboard commands, though I am a cheater so mouse support is enabled by default
 5. Switch between panes with the same keys used to switch between panes in vim
 
 ## iTerm2
