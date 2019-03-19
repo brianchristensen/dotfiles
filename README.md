@@ -31,10 +31,10 @@ Other than the usual vi commands, one can:
 6. Switch between panes with `ctrl-h (or j, k, l)` which is just ctrl + the normal keys used to navigate vim 
 
 ## Useful Tmux chords
-1. `ctrl-b shift-"` split pane horizontally
-2. `ctrl-b shift-%` split pane vertically
-3. `tmux attach -t {session#}` attach to an existing session
-4. `ctrl-b :resize-pane -D (or -U, -L, -R) {#value}` resize panes from command keyboard, though I am a cheater so mouse support is enabled as well.
+1. `ctrl-b "` split pane horizontally
+2. `ctrl-b %` split pane vertically
+3. `tmux attach -t {session# or session name}` attach to an existing session
+4. `ctrl-b :resize-pane -D (or -U, -L, -R) {#size}` resize panes from command keyboard, though I am a cheater so mouse support is enabled as well.
 5. Switch between panes with the same keys used to switch between panes in vim
 
 ## iTerm2
