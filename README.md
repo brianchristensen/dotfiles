@@ -30,7 +30,7 @@ Other than the usual vi commands, one can:
 3. Connect to a database with the `:DB {connection url}` command
 4. Clear out search highlights with double-escape
 5. Easily change the color theme by editing the .vimrc color theme section
-6. Switch between panes with `ctrl-h (or j, k, l)` which is just ctrl + the normal keys used to navigate vim 
+6. Switch between panes with `ctrl-h (or j, k, l)` which is just ctrl + the normal keys used to navigate vi
 
 ## Useful Tmux chords
 1. `ctrl-b "` split pane horizontally
