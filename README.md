@@ -1,7 +1,7 @@
 # Config
 Repo to store my dotfiles.
 
-The following instructions are Mac-centric.
+The following instructions are Mac-centric.  These changes will turn Vim (in the terminal) into a full fledged IDE to rival VSCode, Atom, Sublime text, etc.  TODO: Add debugger support.
 
 ## Install Vim, Tmux, Ctags, Cmake
 1. `brew install vim`
