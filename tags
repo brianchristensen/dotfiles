@@ -1,0 +1,27 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+<esc><esc>	/Users/bchristensen/Projects/config/.vimrc	/^nnoremap <esc><esc> :noh<return>$/;"	m	language:Vim
+<leader>b	/Users/bchristensen/Projects/config/.vimrc	/^nmap <silent> <leader>b :TagbarToggle<CR>$/;"	m	language:Vim
+<leader>t	/Users/bchristensen/Projects/config/.vimrc	/^nmap <silent> <leader>t :NERDTreeTabsToggle<CR>$/;"	m	language:Vim
+<S-Tab>	/Users/bchristensen/Projects/config/.vimrc	/^inoremap <S-Tab> <C-d>$/;"	m	language:Vim
+<S-Tab>	/Users/bchristensen/Projects/config/.vimrc	/^nnoremap <S-Tab> <<$/;"	m	language:Vim
+delimitMate_expand_cr	/Users/bchristensen/Projects/config/.vimrc	/^let delimitMate_expand_cr = 1$/;"	v	language:Vim
+g:airline#extensions#hunks#non_zero_only	/Users/bchristensen/Projects/config/.vimrc	/^let g:airline#extensions#hunks#non_zero_only = 1$/;"	v	language:Vim
+g:airline#extensions#tabline#enabled	/Users/bchristensen/Projects/config/.vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v	language:Vim
+g:airline_detect_paste	/Users/bchristensen/Projects/config/.vimrc	/^let g:airline_detect_paste=1$/;"	v	language:Vim
+g:airline_theme	/Users/bchristensen/Projects/config/.vimrc	/^let g:airline_theme='molokai'$/;"	v	language:Vim
+g:ctrlp_custom_ignore	/Users/bchristensen/Projects/config/.vimrc	/^let g:ctrlp_custom_ignore = 'node_modules\\|DS_Store\\|git'$/;"	v	language:Vim
+g:easytags_async	/Users/bchristensen/Projects/config/.vimrc	/^let g:easytags_async = 1$/;"	v	language:Vim
+g:easytags_dynamic_files	/Users/bchristensen/Projects/config/.vimrc	/^let g:easytags_dynamic_files = 2$/;"	v	language:Vim
+g:easytags_events	/Users/bchristensen/Projects/config/.vimrc	/^let g:easytags_events = ['BufReadPost', 'BufWritePost']$/;"	v	language:Vim
+g:easytags_resolve_links	/Users/bchristensen/Projects/config/.vimrc	/^let g:easytags_resolve_links = 1$/;"	v	language:Vim
+g:easytags_suppress_ctags_warning	/Users/bchristensen/Projects/config/.vimrc	/^let g:easytags_suppress_ctags_warning = 1$/;"	v	language:Vim
+g:mix_format_on_save	/Users/bchristensen/Projects/config/.vimrc	/^let g:mix_format_on_save = 0$/;"	v	language:Vim
+g:mix_format_silent_errors	/Users/bchristensen/Projects/config/.vimrc	/^let g:mix_format_silent_errors = 0$/;"	v	language:Vim
+g:nerdtree_tabs_open_on_console_startup	/Users/bchristensen/Projects/config/.vimrc	/^let g:nerdtree_tabs_open_on_console_startup = 0$/;"	v	language:Vim
+g:rehash256	/Users/bchristensen/Projects/config/.vimrc	/^let g:rehash256 = 1$/;"	v	language:Vim
+g:syntastic_error_symbol	/Users/bchristensen/Projects/config/.vimrc	/^let g:syntastic_error_symbol = '✘'$/;"	v	language:Vim
+g:syntastic_warning_symbol	/Users/bchristensen/Projects/config/.vimrc	/^let g:syntastic_warning_symbol = "▲"$/;"	v	language:Vim
+g:tagbar_type_elixir	/Users/bchristensen/Projects/config/.vimrc	/^let g:tagbar_type_elixir = {$/;"	v	language:Vim
+GdiffInTab	/Users/bchristensen/Projects/config/.vimrc	/^command! GdiffInTab tabedit %|vsplit|Gdiff$/;"	c	language:Vim
+mydelimitMate	/Users/bchristensen/Projects/config/.vimrc	/^augroup mydelimitMate$/;"	a	language:Vim
+mySyntastic	/Users/bchristensen/Projects/config/.vimrc	/^augroup mySyntastic$/;"	a	language:Vim

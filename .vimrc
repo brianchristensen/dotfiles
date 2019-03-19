@@ -15,6 +15,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " ----- Themes/Color Pallete ------------------------------------------
 Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -32,6 +34,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'w0rp/ale'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-endwise'
+Plugin 'luochen1990/rainbow'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -78,7 +81,7 @@ set foldenable                              " Enable folding
 " set foldlevel=0                           " Close all folds by default
 set foldlevelstart=99                       " Open all folds by default
 set foldmethod=indent                       " Syntax are used to specify folds
-set foldminlines=1                          " To allow folding single lines set this to 0
+set foldminlines=0                          " To allow folding single lines set this to 0
 set foldnestmax=10
 set history=1000                            " Increase history from 20 default to 1000
 set hlsearch                                " Highlight searches
@@ -122,9 +125,17 @@ set wrapscan                                " Searches wrap around end of file
 set wildignore+=**/*.jpg,*.jpeg,*.gif,**/*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*
 
+" Enable syntax highlighting
 syntax on
 
+" Enable mouse support
 set mouse=a
+
+" Set color scheme
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
+set background=dark
+set termguicolors
 
 " We need this for plugins like Syntastic and vim-gitgutter which put symbols
 " in the sign column.
@@ -155,29 +166,27 @@ command! GdiffInTab tabedit %|vsplit|Gdiff
 " ----- ctrlpvim/ctrlp.vim settings -----
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-" ----- altercation/vim-colors-solarized settings -----
-" Toggle this to "light" for light colorscheme
-set background=dark
-
-" Set the colorscheme
-colorscheme molokai
-
+" ----- morhetz/gruvbox settings -----
+let g:gruvbox_contrast_dark="hard"
 " ----- bling/vim-airline settings -----
 " Always show statusbar
 set laststatus=2
 
-" Fancy arrow symbols, requires a patched font
+" IGNORE: The following is unnecessary - on Mac use iTerm2 with FiraCode font
+" Fancy arrow symbols require a patched font on terminal-only systems
 " To install a patched font, run over to
 "     https://github.com/abertsch/Menlo-for-Powerline
 " download all the .ttf files, double-click on them and click "Install"
 " Finally, uncomment the next line
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 " Show PASTE if in paste mode
 let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='molokai'
 let g:rehash256 = 1
+
+" ----- luochen1990/rainbow settings -----
+let g:rainbow_active = 1
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t

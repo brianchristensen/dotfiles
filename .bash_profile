@@ -1,47 +1,27 @@
-# bash prompt
-export PS1="\n\[$(tput sgr0)\]\[\033[38;5;177m\]\u\[$(tput sgr0)\]\[\033[38;5;134m\]@\[$(tput sgr0)\]\[\033[38;5;177m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;117m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n>\[$(tput sgr0)\]"
+# ps1
+export PS1="\[\033[38;5;108m\]\n\u@\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;124m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n>\[$(tput sgr0)\]"
 
-# go
-export GOPATH=$HOME/Projects/go
-export GOBIN=$GOPATH/bin
-PATH=$PATH:$GOBIN
-
-# yarn
-export PATH="$PATH:`yarn global bin`"
-
-# metasploit
-PATH=$PATH:/opt/metasploit-framework/bin
-export PATH=$PATH:/opt/metasploit-framework/bin
-
-# android home
-export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/emulator
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/tools/bin
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
-# postgresql
-export PGDATA=${HOME}/Projects/db/pgsql
-export PGHOST=localhost
-alias pg_start='pg_ctl -l $PGDATA/logfile.log start'
-alias pg_stop='pg_ctl stop -m fast'
-alias pg_status='pg_ctl status'
-alias pg_restart='pg_ctl reload'
-
-# alias commands
-alias u='cd ..'
-alias gitclean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
-alias py='python3'
-alias rpw='openssl rand 50 -hex'
-alias irc='irssi'
-alias t="tmux -2"
-alias e="vi"
-
-# added by Anaconda3 4.4.0 installer
-export PATH="/Users/brian/anaconda/bin:$PATH"
-
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# PATH variables
+export PATH="$PATH:/usr/local/opt/erlang/bin"
+
+# environment variables
+export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
+
+# startup scripts
+source ~/StartupScripts/git-completion.bash
+
+# alias commands
+alias u="cd .."
+alias dc="docker-compose"
+alias gitclean="git checkout master && git pull && git branch --merged master | grep -v '\* master' | xargs -n 1 git branch -d"
+alias fexpose="ngrok http -hostname=bc2fe.ngrok.io -host-header=localhost 3001"
+alias bexpose="ngrok http -hostname=bc2be.ngrok.io 8080"
+alias lisp="rlwrap sbcl"
+alias semaphore="docker-compose"
+alias backend="docker-compose --file docker-compose.yml --file docker-compose.semaphore.yml"
+alias frontend="docker-compose"
