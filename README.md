@@ -10,7 +10,7 @@ The following instructions are Mac-centric.
 4. `brew install cmake`
 
 ## Clone this repo, and replace local files
-After cloning this repo, copy and paste all the dotfiles into your home directory.
+After cloning this repo, copy and paste all the dotfiles into your home directory, though probably avoid the .bash_profile and edit your own manually.
 
 ## Install Vundle
 `git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vi`
