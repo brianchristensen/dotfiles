@@ -22,7 +22,7 @@ After cloning this repo, copy and paste all the dotfiles into your home director
 Finish the YouCompleteMe vim autocomplete installation by following the instructions under the following link:
 https://github.com/Valloric/YouCompleteMe#installation
 
-Language support can be found under various other repos by including these under .vimrc plugins - Elixir and Javascript are already present.
+Language support can be added from various other repos by including these under .vimrc plugins - Elixir and Javascript are already present.
 
 ## Useful Vim chords/commands
 Other than the usual vim commands, one can:
