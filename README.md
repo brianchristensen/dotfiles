@@ -11,10 +11,10 @@ Repo to store my dotfiles
 After cloning this repo, copy and paste all the dotfiles into your home directory
 
 ## Install Vundle
-git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vi
+`git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vi`
 
 ## Install Vim plugins
-vim +PluginInstall +qal
+`vim +PluginInstall +qal`
 
 ## Install YouCompleteMe (other than vundle plugin portion, which is already done)
 Finish the YouCompleteMe vim autocomplete installation by following the instructions under the following link:
