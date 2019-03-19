@@ -4,13 +4,13 @@ Repo to store my dotfiles.
 The following instructions are Mac-centric.
 
 ## Install Vim, Tmux, Ctags, Cmake
-1. brew install vim
-2. brew install tmux
-3. brew install ctags
-4. brew install cmake
+1. `brew install vim`
+2. `brew install tmux`
+3. `brew install ctags`
+4. `brew install cmake`
 
 ## Clone this repo, and replace local files
-After cloning this repo, copy and paste all the dotfiles into your home directory
+After cloning this repo, copy and paste all the dotfiles into your home directory.
 
 ## Install Vundle
 `git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vi`
@@ -36,7 +36,7 @@ Other than the usual vi commands, one can:
 1. `ctrl-b "` split pane horizontally
 2. `ctrl-b %` split pane vertically
 3. `tmux attach -t {session# or session name}` attach to an existing session
-4. `ctrl-b :resize-pane -D (or -U, -L, -R) {#size}` resize panes from command keyboard, though I am a cheater so mouse support is enabled as well.
+4. `ctrl-b :resize-pane -D (or -U, -L, -R) {#size}` resize panes from command keyboard, though I am a cheater so mouse support is enabled as well
 5. Switch between panes with the same keys used to switch between panes in vim
 
 ## iTerm2
