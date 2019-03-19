@@ -1,5 +1,7 @@
 # Config
-Repo to store my dotfiles
+Repo to store my dotfiles.
+
+The following instructions are Mac-centric.
 
 ## Install Vim, Tmux, Ctags, Cmake
 1. brew install vim
