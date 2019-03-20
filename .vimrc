@@ -143,9 +143,6 @@ set termguicolors
 " in the sign column.
 hi clear SignColumn
 
-" Enable fzf (fuzzy find)
-set rtp+=/usr/local/opt/fzf
-
 " ----- Tabbing and Shift-Tabbing -------------------------------------
 filetype plugin indent on
 " show existing tab with 2 spaces width
