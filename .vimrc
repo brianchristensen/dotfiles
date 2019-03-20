@@ -171,6 +171,7 @@ cnoreabbrev ag Ack
 cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
+cnoreabbrev ack Ack
 
 " ----- ctrlpvim/ctrlp.vim settings -----
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
