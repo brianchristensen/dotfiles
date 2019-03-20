@@ -201,15 +201,29 @@ let g:rainbow_active = 1
 " Open/close NERDTree Tabs with \t
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
-let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup=0
 " Show dotfiles
 let NERDTreeShowHidden=1
 
 " ----- scrooloose/syntastic settings -----
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_error_symbol = '✘'
+let g:syntastic_style_error_symbol = '⁉️'
 let g:syntastic_warning_symbol = "▲"
+let g:syntastic_style_warning_symbol = '💩'
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
 augroup mySyntastic
-
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
 
