@@ -35,6 +35,8 @@ Plugin 'w0rp/ale'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-endwise'
 Plugin 'luochen1990/rainbow'
+Plugin 'tpope/vim-dadbod'
+Plugin 'mileszs/ack.vim'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -141,6 +143,9 @@ set termguicolors
 " in the sign column.
 hi clear SignColumn
 
+" Enable fzf (fuzzy find)
+set rtp+=/usr/local/opt/fzf
+
 " ----- Tabbing and Shift-Tabbing -------------------------------------
 filetype plugin indent on
 " show existing tab with 2 spaces width
@@ -162,6 +167,13 @@ nnoremap <esc><esc> :noh<return>
 
 " ----- Plugin-Specific Settings --------------------------------------
 command! GdiffInTab tabedit %|vsplit|Gdiff
+
+" ----- mileszs/ack.vim settings -----
+let g:ackprg = 'ag --nogroup --nocolor --column' " enables silver searcher integration
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
 
 " ----- ctrlpvim/ctrlp.vim settings -----
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
