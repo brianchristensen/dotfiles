@@ -3,11 +3,13 @@ Repo to store my dotfiles.
 
 The following instructions are Mac-centric.  These changes will turn Vim (in the terminal) into a full fledged IDE to rival VSCode, Atom, Sublime text, etc.  TODO: Add debugger support.
 
-## Install Vim, Tmux, Ctags, Cmake
+## Install Vim, Tmux, Ctags, Cmake, Ack, The Silver Searcher
 1. `brew install vim`
 2. `brew install tmux`
 3. `brew install ctags`
 4. `brew install cmake`
+5. `brew install ack`
+6. `brew install the_silver_searcher`
 
 ## Clone this repo, and replace local files
 After cloning this repo, copy and paste all the dotfiles into your home directory, though probably avoid the .bash_profile and edit your own manually.
