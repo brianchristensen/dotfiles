@@ -125,7 +125,7 @@ set wildmode=list:longest                   " Complete only until point of ambig
 set wrap!                                   " Dont wrap at 80 chars
 set wrapscan                                " Searches wrap around end of file
 set wildignore+=**/*.jpg,*.jpeg,*.gif,**/*.png,*.gif,*.psd,*.o,*.obj,*.min.js
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*
+"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*
 
 " Enable syntax highlighting
 syntax on
@@ -201,7 +201,9 @@ let g:rainbow_active = 1
 " Open/close NERDTree Tabs with \t
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
-let g:nerdtree_tabs_open_on_console_startup = 0
+let g:nerdtree_tabs_open_on_console_startup=1
+" Show dotfiles
+let NERDTreeShowHidden=1
 
 " ----- scrooloose/syntastic settings -----
 let g:syntastic_error_symbol = '✘'
