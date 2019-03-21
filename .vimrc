@@ -51,8 +51,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-surround'
 " Align CSV files at commas, align Markdown tables, and more
 Plugin 'godlygeek/tabular'
-" Automaticall insert the closing HTML tag
-Plugin 'HTML-AutoCloseTag'
+" Automaticall insert the closing tag
+Plugin 'alvan/vim-closetag'
 
 " ----- Language support plugins --------------------------------------
 " -- Elixir --
@@ -161,6 +161,11 @@ inoremap <S-Tab> <C-d>
 nnoremap <esc><esc> :noh<return>
 " clear last used search pattern by searching for empty string
 :let @/ = ""
+" file tab hotkeys
+map <C-t><up> :tabr<cr>
+map <C-t><down> :tabl<cr>
+map <C-t><left> :tabp<cr>
+map <C-t><right> :tabn<cr>
 
 " ----- Plugin-Specific Settings --------------------------------------
 command! GdiffInTab tabedit %|vsplit|Gdiff
@@ -178,6 +183,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " ----- morhetz/gruvbox settings -----
 let g:gruvbox_contrast_dark="hard"
+
 " ----- bling/vim-airline settings -----
 " Always show statusbar
 set laststatus=2
@@ -197,6 +203,24 @@ let g:rehash256 = 1
 
 " ----- luochen1990/rainbow settings -----
 let g:rainbow_active = 1
+
+" ----- ntpeters/vim-better-whitespace -----
+let g:better_whitespace_enabled=0 " highlight whitespace toggle
+let g:strip_whitespace_on_save=0 " strip trailing whitespace on save toggle
+
+" ----- alvan/vim-closetag settings -----
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+let g:closetag_filetypes = 'html,xhtml,phtml'
+let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+let g:closetag_emptyTags_caseSensitive = 0
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ }
+let g:closetag_shortcut = '>'
+let g:closetag_close_shortcut = '<leader>>'
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
