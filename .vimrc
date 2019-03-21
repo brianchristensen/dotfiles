@@ -201,6 +201,8 @@ let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled = 1
 let g:rehash256 = 1
 
+" ----- slashmili/alchemist.vim settings -----
+
 " ----- luochen1990/rainbow settings -----
 let g:rainbow_active = 1
 
@@ -229,6 +231,8 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=0
 " Show dotfiles
 let NERDTreeShowHidden=1
+" Ignore ctags
+let NERDTreeIgnore=['tags']
 
 " ----- scrooloose/syntastic settings -----
 set statusline+=%#warningmsg#
