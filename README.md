@@ -51,7 +51,8 @@ Other than the usual vim commands, one can:
 5. Switch between panes with the same keys used to switch between panes in vim
 
 ## Zsh and iTerm2
-I use Z shell instead of bash in both iTerm and in VSC Integrated Terminal.  I manage it with Oh-My-Zsh
+I use Z shell instead of bash in both iTerm and in VSC Integrated Terminal.  I manage it with Oh-My-Zsh:
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 I use Powerlevel10k Prompt https://github.com/romkatv/powerlevel10k
