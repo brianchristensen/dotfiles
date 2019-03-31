@@ -4,8 +4,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/brian/.oh-my-zsh"
 
-#ZSH_THEME="gruvbox"
-#ZSH_THEME="bira"
 ZSH_THEME=powerlevel10k/powerlevel10k
 SOLARIZED_THEME="dark"
 
@@ -17,11 +15,7 @@ ENABLE_CORRECTION="true"
 # much, much faster.
 #DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# Plugins
 plugins=(
   osx 
   git 
@@ -36,10 +30,12 @@ ZSH_DISABLE_COMPFIX=true
 
 source $ZSH/oh-my-zsh.sh
 
-### User configuration ###
+############ User configuration ############
+
 # Font mode for powerlevel9k
 POWERLEVEL9K_MODE="nerdfont-complete"
 
+# I call my color scheme Neapolitan Ice Cream
 # User prompt
 user() {
   echo -n "\u26a1 $(whoami)@$(hostname -s)"
@@ -150,6 +146,15 @@ alias pg_stop='pg_ctl stop -m fast'
 alias pg_status='pg_ctl status'
 alias pg_restart='pg_ctl reload'
 
+# added by Anaconda3 4.4.0 installer
+export PATH="/Users/brian/anaconda/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 # alias commands
 alias u='cd ..'
 alias gitclean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
@@ -159,11 +164,3 @@ alias irc='irssi'
 alias t="tmux -2"
 alias e="vi"
 
-# added by Anaconda3 4.4.0 installer
-export PATH="/Users/brian/anaconda/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
