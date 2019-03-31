@@ -118,7 +118,7 @@ HIST_STAMPS="mm/dd/yyyy"
 
 # Prompt elements
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_user dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs)
 
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
