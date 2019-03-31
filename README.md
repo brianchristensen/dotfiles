@@ -59,6 +59,7 @@ With custom prompt config modified from https://github.com/bhilburn/powerlevel9k
 
 Install the following ZSH plugins:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 I also made sure that I updated my iTerm colors to match the vim theme colors.  Most of the popular themes have a terminal colors file that can be imported into iTerm, even if they exist in a separate repo, for instance gruvbox iTerm colors can be found https://github.com/herrbischoff/iterm2-gruvbox.  In addition to updating the terminal colors, I also downloaded the font FiraCode from https://nerdfonts.com/ and set this as my iTerm font and enabled ligatures, as well as manually setting the vertical/horizontal spacings of this font because the defaults drove me crazy.
