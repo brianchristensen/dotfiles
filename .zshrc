@@ -35,7 +35,6 @@ source $ZSH/oh-my-zsh.sh
 # Font mode for powerlevel9k
 POWERLEVEL9K_MODE="nerdfont-complete"
 
-# I call my color scheme Neapolitan Ice Cream
 # User prompt
 user() {
   echo -n "\u26a1 $(whoami)@$(hostname -s)"
@@ -119,6 +118,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_user dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs)
 
 ############### Path and Aliases ################
+
 # go
 export GOPATH=$HOME/Projects/go
 export GOBIN=$GOPATH/bin
