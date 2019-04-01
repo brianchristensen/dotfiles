@@ -11,6 +11,8 @@ The following instructions are Mac-centric.
 5. `brew install ack`
 6. `brew install the_silver_searcher`
 
+Also check to see if zsh is installed and if not then brew install zsh.
+
 ## Clone this repo, and replace local files
 After cloning this repo, copy and paste all the dotfiles into your home directory, though probably avoid the .bash_profile and edit your own manually.
 
