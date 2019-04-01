@@ -55,7 +55,10 @@ I use Z shell instead of bash in both iTerm and in VSC Integrated Terminal.  I m
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-I use Powerlevel10k Prompt https://github.com/romkatv/powerlevel10k
+I use Powerlevel10k Prompt:
+
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
 With custom prompt config modified from https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
 
 Install the following ZSH plugins:
