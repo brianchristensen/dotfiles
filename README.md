@@ -1,7 +1,7 @@
 # Dotfiles
 Repo to store my dotfiles.
 
-![l337 h4x0r](https://github.com/brianchristensen/dotfiles/blob/master/hacker_station.jpeg)
+![l337 h4x0r](https://github.com/brianchristensen/dotfiles/blob/master/ghost_in_the_shell.jpg)
 
 The following instructions are Mac-centric.
 
