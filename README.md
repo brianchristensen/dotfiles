@@ -1,6 +1,8 @@
 # Dotfiles
 Repo to store my dotfiles.
 
+![l337 h4x0r](https://github.com/brianchristensen/dotfiles/blob/master/hacker_station.jpeg)
+
 The following instructions are Mac-centric.
 
 ## Install Vim, Tmux, Ctags, Cmake, Ack, The Silver Searcher
