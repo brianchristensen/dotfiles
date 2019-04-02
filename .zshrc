@@ -159,7 +159,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # alias commands
 alias u='cd ..'
-alias gitclean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias gitclean="git checkout master && git pull && git branch --merged master | grep -v '\* master' | xargs -n 1 git branch -d"
 alias py='python3'
 alias rpw='openssl rand 50 -hex'
 alias irc='irssi'
