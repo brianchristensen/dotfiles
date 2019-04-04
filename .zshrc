@@ -158,6 +158,9 @@ export NVM_DIR="$HOME/.nvm"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # alias commands
 alias u='cd ..'
 alias gitclean="git checkout master && git pull && git branch --merged master | grep -v '\* master' | xargs -n 1 git branch -d"
