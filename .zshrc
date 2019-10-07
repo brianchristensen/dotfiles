@@ -2,18 +2,18 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/brian/.oh-my-zsh"
+export ZSH="/Users/bchristensen/.oh-my-zsh"
 
 ZSH_THEME=powerlevel10k/powerlevel10k
 SOLARIZED_THEME="dark"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-#DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Plugins
 plugins=(
@@ -91,6 +91,7 @@ POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
 
 # VCS CONFIG
 POWERLEVEL9K_SHOW_CHANGESET=false
+POWERLEVEL9K_USE_CACHE=true
 
 # Status
 POWERLEVEL9K_OK_ICON=$'\uf164'
@@ -115,53 +116,30 @@ ENABLE_CORRECTION="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 # Prompt elements
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_user dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_user dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs)
 
 ############### Path and Aliases ################
+# Set CLICOLOR if you want Ansi Colors in iTerm2 
+export CLICOLOR=1
 
-# go
-export GOPATH=$HOME/Projects/go
-export GOBIN=$GOPATH/bin
-PATH=$PATH:$GOBIN
+# Set colors to match iTerm2 Terminal Colors
+export TERM=xterm-256color
 
-# yarn
-export PATH="$PATH:`yarn global bin`"
-
-# metasploit
-PATH=$PATH:/opt/metasploit-framework/bin
-export PATH=$PATH:/opt/metasploit-framework/bin
-
-# android home
-export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/emulator
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/tools/bin
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
-# postgresql
-export PGDATA=${HOME}/Projects/db/pgsql
-export PGHOST=localhost
-alias pg_start='pg_ctl -l $PGDATA/logfile.log start'
-alias pg_stop='pg_ctl stop -m fast'
-alias pg_status='pg_ctl status'
-alias pg_restart='pg_ctl reload'
-
-# added by Anaconda3 4.4.0 installer
-export PATH="/Users/brian/anaconda/bin:$PATH"
-
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # alias commands
 alias u='cd ..'
-alias gitclean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 alias py='python3'
 alias rpw='openssl rand 50 -hex'
 alias irc='irssi'
 alias t="tmux -2"
 alias e="vi"
-
+alias dc="docker-compose"
+alias gitclean="git checkout master && git pull && git branch --merged master | grep -v '\* master' | xargs -n 1 git branch -d"
+alias semaphore="docker-compose"
+alias backend="docker-compose --file docker-compose.yml --file docker-compose.semaphore.yml"
+alias frontend="docker-compose"
