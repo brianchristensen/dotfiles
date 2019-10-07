@@ -20,6 +20,8 @@ plugins=(
   osx 
   git 
   node 
+  rust
+  docker
   mix 
   zsh-autosuggestions 
   zsh-syntax-highlighting 

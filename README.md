@@ -1,6 +1,8 @@
 # Dotfiles
 Repo to store my dotfiles.
 
+![l337 h4x0r](https://github.com/brianchristensen/dotfiles/blob/master/ghost_in_the_shell.jpg)
+
 The following instructions are Mac-centric.
 
 ## Install Vim, Tmux, Ctags, Cmake, Ack, The Silver Searcher
@@ -10,6 +12,8 @@ The following instructions are Mac-centric.
 4. `brew install cmake`
 5. `brew install ack`
 6. `brew install the_silver_searcher`
+
+Also check to see if zsh is installed and if not then brew install zsh.
 
 ## Clone this repo, and replace local files
 After cloning this repo, copy and paste all the dotfiles into your home directory, though probably avoid the .bash_profile and edit your own manually.
@@ -55,7 +59,10 @@ I use Z shell instead of bash in both iTerm and in VSC Integrated Terminal.  I m
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-I use Powerlevel10k Prompt https://github.com/romkatv/powerlevel10k
+I use Powerlevel10k Prompt:
+
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
 With custom prompt config modified from https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
 
 Install the following ZSH plugins:
@@ -64,4 +71,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-I also made sure that I updated my iTerm colors to match the vim theme colors.  Most of the popular themes have a terminal colors file that can be imported into iTerm, even if they exist in a separate repo, for instance gruvbox iTerm colors can be found https://github.com/herrbischoff/iterm2-gruvbox.  In addition to updating the terminal colors, I also downloaded the font FiraCode from https://nerdfonts.com/ and set this as my iTerm font and enabled ligatures, as well as manually setting the vertical/horizontal spacings of this font because the defaults drove me crazy.
+I also made sure that I updated my iTerm colors to match the vim theme colors.  Most of the popular themes have a terminal colors file that can be imported into iTerm, even if they exist in a separate repo, for instance gruvbox iTerm colors can be found https://github.com/herrbischoff/iterm2-gruvbox.  In addition to updating the terminal colors, I also downloaded the font FiraCode from https://nerdfonts.com/ and set this as my iTerm font and enabled ligatures, as well as manually setting the vertical/horizontal spacings of this font because the defaults drove me crazy.  Note: VSCode uses FiraCode from the official github repo while iTerm and VSCode Integrated terminal use FiraCode from NerdFonts, which once installed is called FuraCode NF :shrug:
+
+## VSCode
+I love Vim, but for a modern level of productivity on a dedicated dev box VSCode is hard to beat.  I store all of my custom Vim-inspired VSCode settings in a gist and use the awesome Settings Sync plugin to share settings between my dev environments. https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
