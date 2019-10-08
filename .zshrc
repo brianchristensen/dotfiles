@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/bchristensen/.oh-my-zsh"
+export ZSH="/Users/brian/.oh-my-zsh"
 
 ZSH_THEME=powerlevel10k/powerlevel10k
 SOLARIZED_THEME="dark"
@@ -142,6 +142,7 @@ alias t="tmux -2"
 alias e="vi"
 alias dc="docker-compose"
 alias gitclean="git checkout master && git pull && git branch --merged master | grep -v '\* master' | xargs -n 1 git branch -d"
-alias semaphore="docker-compose"
-alias backend="docker-compose --file docker-compose.yml --file docker-compose.semaphore.yml"
-alias frontend="docker-compose"
+alias flushcache="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+alias ans="ansible"
+alias ansp="ansible-playbook"
+
