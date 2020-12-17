@@ -145,4 +145,4 @@ alias gitclean="git checkout master && git pull && git branch --merged master | 
 alias flushcache="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ans="ansible"
 alias ansp="ansible-playbook"
-
+alias timestamp='date -u +"%Y-%m-%dT%H:%M:%SZ"'
